@@ -16,6 +16,9 @@ int main()
 {
     int shomareFilm;
     int edameYaBazgasht;
+    int nahaeiYaBazgasht;
+    int tedadTicket;
+    int ticketeBaghimande = 300;
 
     struct Cinema Royal;
     Royal.zarfiat = 300;
@@ -41,41 +44,99 @@ int main()
     Cheshmo_Gush.bazigaran = "Bahrame Afshari, Anahita Dargahi, Mas'oude Keramati Va Amine Hayaei!";
     Cheshmo_Gush.kholase = "Yeki Sahneye Ghatl Ra Nadide Chon Nabinast Va Digari Sahne Ra Faghat Dide Chon Nashenavast!";
 
-    printf("\n      Be CinemaTicket Khosh Amadid!\n\n");
+    printf("\n      Be CinemaTickete Khashayare Rashidi Az AUT Khosh Amadid!\n\n");
     Bargasht:
     printf("\tBaraye Reserve e Ticket Yeki Az Film Haye Zir Ra Entekhab Namaeid: \n\t1. Motreb\n\t2. Zire Nazar \n\t3. Cheshmo Gush Basteh\n\t");
     scanf("%d" , &shomareFilm);
     if(shomareFilm == 1)
     {
         printf("\tMotreb! Filmi Az Noe %s Be Kargardanie %s:\n\tModdat Zaman: %d Daghighe\n\tBazigaran: %s\n\t%s\n\n" , Motreb.sabk, Motreb.kargardan, Motreb.zaman, Motreb.bazigaran, Motreb.kholase);
-        printf("      Jahate Edameye Farayande Reserve In Film Adade 1 Va Dar Gheyre In Surat Adade 0 Ra Vared Namaeid:\n\t");
+        printf("      Jahate Edameye Farayande Reserve Filme Motreb Adade 1 Va Dar Gheyre In Surat Adade 0 Ra Vared Namaeid:\n\t");
         scanf("%d" , &edameYaBazgasht);
     if(edameYaBazgasht == 0)
     {
         goto Bargasht;
     }
+    if(edameYaBazgasht == 1)
+    {
+        printf("\tLotfan Te'dade Ticket Haye Morede Nazar Ra Vared Namaeid:\n\t");
+        scanf("%d" , &tedadTicket);
+    }
+        if (tedadTicket <= ticketeBaghimande)
+        {
+            printf("\tJahate Taeide Nahaei Adade 1 Ra Vared Namaeid Va Dar Surate Enseraf Adade 0 Ra Vared Namaeid:\n\t");
+            scanf("%d" , &nahaeiYaBazgasht);
+            if(nahaeiYaBazgasht == 0)
+            {
+                goto Bargasht;
+            }
+            if(nahaeiYaBazgasht == 1)
+            {
+                printf("\t\a%d Tickete Shoma Ba Moaffaghiat Reserve Shod!" , tedadTicket);
+            }
+        }
+        if (tedadTicket > ticketeBaghimande)
+        {
+            printf("\tMoteassefane, Zarfiat Be Te'dad Tickete Morede Niaze Shoma, Khali Nemibashad");
+        }
     }
 
     if(shomareFilm == 2)
     {
         printf("\tZire Nazar! Filmi Az Noe %s Be Kargardanie %s:\n\tModdat Zaman: %d Daghighe\n\tBazigaran: %s\n\t%s\n\n" , Zire_Nazar.sabk, Zire_Nazar.kargardan, Zire_Nazar.zaman, Zire_Nazar.bazigaran, Zire_Nazar.kholase);
-        printf("      Jahate Edameye Farayande Reserve In Film Adade 1 Va Dar Gheyre In Surat Adade 0 Ra Vared Namaeid:\n\t");
+        printf("      Jahate Edameye Farayande Reserve Filme Zire Nazar Adade 1 Va Dar Gheyre In Surat Adade 0 Ra Vared Namaeid:\n\t");
         scanf("%d" , &edameYaBazgasht);
     if(edameYaBazgasht == 0)
     {
         goto Bargasht;
     }
+    if(edameYaBazgasht == 1)
+    {
+        printf("\tLotfan Te'dade Ticket Haye Morede Nazar Ra Vared Namaeid:\n\t");
+        scanf("%d" , &tedadTicket);
+    }
+        if (tedadTicket <= ticketeBaghimande)
+        {
+            printf("\tJahate Taeide Nahaei Adade 1 Ra Vared Namaeid Va Dar Surate Enseraf Adade 0 Ra Vared Namaeid:\n\t");
+            scanf("%d" , &nahaeiYaBazgasht);
+            if(nahaeiYaBazgasht == 0)
+            {
+                goto Bargasht;
+            }
+            if(nahaeiYaBazgasht == 1)
+            {
+                printf("\t\a%d Tickete Shoma Ba Moaffaghiat Reserve Shod!" , tedadTicket);
+            }
+        }
     }
 
     if(shomareFilm == 3)
     {
         printf("\tCheshmo Gush Basteh! Filmi Az Noe %s Be Kargardanie %s:\n\tModdat Zaman: %d Daghighe\n\tBazigaran: %s\n\t%s\n\n" , Cheshmo_Gush.sabk, Cheshmo_Gush.kargardan, Cheshmo_Gush.zaman, Cheshmo_Gush.bazigaran, Cheshmo_Gush.kholase);
-        printf("      Jahate Edameye Farayande Reserve In Film Adade 1 Va Dar Gheyre In Surat Adade 0 Ra Vared Namaeid:\n\t");
+        printf("      Jahate Edameye Farayande Reserve Filme Cheshmo Gush Baste Adade 1 Va Dar Gheyre In Surat Adade 0 Ra Vared Namaeid:\n\t");
         scanf("%d" , &edameYaBazgasht);
     if(edameYaBazgasht == 0)
     {
         goto Bargasht;
     }
+    if(edameYaBazgasht == 1)
+    {
+        printf("\tLotfan Te'dade Ticket Haye Morede Nazar Ra Vared Namaeid:\n\t");
+        scanf("%d" , &tedadTicket);
+    }
+        if (tedadTicket <= ticketeBaghimande)
+        {
+            printf("\tJahate Taeide Nahaei Adade 1 Ra Vared Namaeid Va Dar Surate Enseraf Adade 0 Ra Vared Namaeid:\n\t");
+            scanf("%d" , &nahaeiYaBazgasht);
+            if(nahaeiYaBazgasht == 0)
+            {
+                goto Bargasht;
+            }
+            if(nahaeiYaBazgasht == 1)
+            {
+                printf("\t\a%d Tickete Shoma Ba Moaffaghiat Reserve Shod!" , tedadTicket);
+            }
+        }
     }
     return 0;
 }
